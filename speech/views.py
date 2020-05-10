@@ -1,23 +1,23 @@
-from django.db import models
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.generic import CreateView
-from speech.models import models
+from django import urls
+from django.views.generic import CreateView,DetailView
 from speech.models import History
 
 class HistoryCreate(CreateView):
     model = History
-    fields = ['name']
-    template_dir = 'splash.html'
-    user_search = models.CharField(max_length = 1000)
-    youtube_result = models.CharField(max_length = 1000)
-    greeting = 'morning'
+    template_name = 'splash.html'
+    fields = [
+        'user_search',
+    ]
 
-    def get(self, request, *args, **kwargs):
-#        users = User.objects.all()
-        return render(request, 'splash.html')
+    def form_valid(self,form):
+        result = super().form_valid(form)
+        self.object.set_youtube_result()
+        return result
+
+    def get_success_url(self):
+        return urls.reverse("success",kwargs = {'pk':self.object.id})
 
 
-    def history(request):
-        #return HttpResponse('History')
-        return render(request, 'splash.html')
+class Success(DetailView):
+    template_name = "success.html"
+    model = History

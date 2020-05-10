@@ -1,0 +1,27 @@
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% block body %}
+  <head>
+    <meta charset="utf-8">
+    <title>History</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-image: url('images/background.jpg');
+      }
+    </style>
+    {{insert}}
+    <h1>
+      <p>Enter Keywords below to begin your search</p>
+    </h1>
+    <form method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+{% endblock %}
+</html>
