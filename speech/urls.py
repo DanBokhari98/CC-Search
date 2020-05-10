@@ -16,17 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-
-
-urlpatterns = [
-    path('history/', views.History.as_view()),
-]
-
-#urlpatterns = [
-#    path('history/', History.as_view()),
-#]
-
+from speech.views import HistoryCreate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('history/', HistoryCreate.as_view()),
 ]
