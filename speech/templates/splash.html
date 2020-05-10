@@ -1,25 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" href="style/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <head>
+    <link rel="stylesheet"
+    href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <title>History</title>
   </head>
   <body>
     <style>
       body {
-        background-image: url('images/background.jpg');
+        background-image: url("{% static 'css/background.jpg'%}");
+        background-repeat: no-repeat;
+        background-size: 100%;
       }
     </style>
     {{insert}}
     <h1>
       <p>Enter Keywords below to begin your search</p>
     </h1>
-    <form method="post">{% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Save">
-    </form>
+
     <div class="search_bar">
       <form class="search">
         <label class="youtube" for="yvideo">Keywords:</label><br>
