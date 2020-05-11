@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+<br><br>
+{% block body %}
+{{object.user_search}}
+<div class="video" text-align="center">
+  <iframe width="720" height="480"
+    src="https://www.youtube.com/embed/{{object.youtube_id}}?start={{object.youtube_time}}; controls=">
+  </iframe>
+</div>
+{% endblock %}

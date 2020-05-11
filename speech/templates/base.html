@@ -1,0 +1,45 @@
+<html lang="en" dir="ltr">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% block body %}
+  <head>
+    <meta charset="utf-8">
+    <title>History</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <style>
+      body {
+        background-image: url("{% static 'css/background.jpg'%}");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    </style>
+    <div class="main-page">
+
+    {{insert}}
+
+
+      <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="card text-center searchForm">
+            <div class="card-body">
+              <h5 class="card-title">Enter keywords below to begin search</h5>
+              <form class="submit" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </body>
+{% endblock %}
+</html>

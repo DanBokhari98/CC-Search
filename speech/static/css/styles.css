@@ -1,9 +1,82 @@
-
-
-body {
-  font-family: Arial;
+* {
+  font-family: 'Nunito'
 }
 
+.websiteTitle {
+  font-family: 'Nunito';
+  font-size: 45pt;
+  font-weight: bold;
+}
+
+input.id_user_search{
+  width: 1000pt;
+}
+
+h5.card-title{
+  font-family: 'Nunito';
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+}
+
+* {
+  font-family: 'Nunito'
+}
+body,.main-page {
+  text-align: center;
+  width:100%;
+  height:75%;
+  background-repeat: repeat;
+}
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+.searchForm {
+  width:40%;
+  height:40%;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+form.as_p{
+  width:40%;
+  height:40%;
+}
+
+form.Submit button{
+  width: 25%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search button {
+  width: 45%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+
+/*
 p{
   color: white;
   text-align: center;
@@ -20,17 +93,6 @@ div{
     font-size: 24px;
     color: white;
 }​
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
 
 input[type=text] {
   width: 130px;
@@ -51,6 +113,12 @@ input[type=text]:focus {
   width: 30%;
 }
 
+
+form.as_p{
+  width:40%;
+  height:40%;
+}
+
 form.search button {
 
   width: 5%;
@@ -59,6 +127,6 @@ form.search button {
   color: white;
   font-size: 17px;
   border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
+  border-left: none;
   cursor: pointer;
 }

@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from speech.views import HistoryCreate
+from speech.views import HistoryCreate,Success
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('history/', HistoryCreate.as_view()),
+    path('success/<int:pk>/',Success.as_view(),name="success")
 ]

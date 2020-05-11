@@ -1,0 +1,74 @@
+* {
+  font-family: 'Nunito'
+}
+body,.main-page {
+  background-color: black;
+  width:100%;
+  height:100%;
+}
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+.searchForm {
+  width:40%;
+  height:40%;
+}
+/*p{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 1px #37E1E1
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+}
+
+div{
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}​
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 30%;
+}
+
+form.search button {
+
+  width: 5%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}*/
